@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import './App.css';
+import {useState} from "react";
+import './App.css'
 
 const Experience = () => {
     const [expData, setExpData] = useState({
@@ -10,7 +10,7 @@ const Experience = () => {
         const {name, value} = e.target;
         setExpData({
             ...expData,
-            [name]:value
+            [name]:value,
         })
     }
     const handleReset = () => {
@@ -44,12 +44,11 @@ const Experience = () => {
                     <button type="reset" onClick={handleReset}>Reset</button>
                 </form>
             </div>
-            <div className="expDetails">
-                <h2>{expData.title}</h2>
-                <h4>{expData.desc}</h4>
-            </div>
+            <div className="resumeDetails">
+                    <h2>{expData.title}</h2>
+                    <p>{expData.desc}</p>
+                </div>
         </div>
     );
 }
- 
 export default Experience;
