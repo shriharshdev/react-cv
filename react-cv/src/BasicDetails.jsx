@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import './App.css'
 
 const BasicDetails = () => {
@@ -25,7 +25,6 @@ const BasicDetails = () => {
             dob: ''
         });
     };
-
     return ( 
         <div className="basicDetails">
             <div className="personDetailForm">
@@ -65,7 +64,7 @@ const BasicDetails = () => {
                 </form>
                 <button type="reset" onClick={handleReset}>Reset</button>
             </div>
-            <div className="personalDetails">
+            <div className="resumeDetails">
                 <h2>{formData.name}</h2>
                 <h3>{formData.email}</h3>
                 <h3>{formData.pno}</h3>
@@ -74,5 +73,6 @@ const BasicDetails = () => {
         </div>
     );
 }
+
  
 export default BasicDetails;
